@@ -1,0 +1,30 @@
+[
+  {
+    "feature": "historical_avg_delay",
+    "importance": 0.689024031162262
+  },
+  {
+    "feature": "invoice_amount",
+    "importance": 0.0878126323223114
+  },
+  {
+    "feature": "industry_risk_score",
+    "importance": 0.08123917132616043
+  },
+  {
+    "feature": "days_since_issue",
+    "importance": 0.07652417570352554
+  },
+  {
+    "feature": "payment_terms_days",
+    "importance": 0.06540001183748245
+  },
+  {
+    "feature": "credit_utilization_ratio",
+    "importance": 0.0
+  },
+  {
+    "feature": "dispute_flag",
+    "importance": 0.0
+  }
+]
