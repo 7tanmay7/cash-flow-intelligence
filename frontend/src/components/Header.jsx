@@ -40,9 +40,9 @@ export default function Header({ onRefresh }) {
 
   return (
     <header style={{ marginBottom: '32px' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '20px' }}>
-        <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+      <div className="header-container">
+        <div className="header-title-group">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
             <h1 style={{ margin: 0, fontSize: '2.2rem' }}>Cash Flow <span className="highlight-text">Intelligence</span></h1>
             <span className="badge badge-low" style={{ background: '#121212', color: '#FFFFFF', padding: '4px 8px' }}>v1.0 MONOREPO</span>
           </div>
@@ -51,7 +51,7 @@ export default function Header({ onRefresh }) {
           </p>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
+        <div className="header-actions">
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.82rem', color: 'var(--text-muted)', background: '#FFFFFF', padding: '6px 12px', borderRadius: '20px', border: '1px solid var(--border-light)' }}>
             <ShieldCheck size={16} color="var(--risk-low)" />
             <span>Hallucination Guardrail <strong style={{ color: 'var(--risk-low)' }}>ACTIVE</strong></span>

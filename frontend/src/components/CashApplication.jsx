@@ -78,16 +78,16 @@ export default function CashApplication() {
 
         {/* Stats bar */}
         {data && (
-          <div style={{ display: 'flex', gap: '24px', background: '#FAF9F5', padding: '16px 20px', borderRadius: '8px', border: '1px solid var(--border-light)' }}>
-            <div>
+          <div className="stats-bar">
+            <div className="stats-item">
               <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)', fontWeight: 600 }}>TOTAL STATEMENT ROWS</span>
               <div style={{ fontSize: '1.4rem', fontWeight: 600 }}>{data.total_processed}</div>
             </div>
-            <div style={{ borderLeft: '1px solid var(--border-light)', paddingLeft: '24px' }}>
+            <div className="stats-item">
               <span style={{ fontSize: '0.78rem', color: 'var(--risk-low)', fontWeight: 600 }}>AUTO-MATCHED</span>
               <div style={{ fontSize: '1.4rem', fontWeight: 600, color: 'var(--risk-low)' }}>{data.total_matched}</div>
             </div>
-            <div style={{ borderLeft: '1px solid var(--border-light)', paddingLeft: '24px' }}>
+            <div className="stats-item">
               <span style={{ fontSize: '0.78rem', color: 'var(--risk-high)', fontWeight: 600 }}>UNMATCHED (MANUAL REVIEW)</span>
               <div style={{ fontSize: '1.4rem', fontWeight: 600, color: 'var(--risk-high)' }}>{data.total_unmatched}</div>
             </div>
@@ -224,16 +224,8 @@ export default function CashApplication() {
 
       {/* Manual Resolution Modal */}
       {selectedUnmatched && (
-        <div style={{
-          position: 'fixed',
-          top: 0, left: 0, right: 0, bottom: 0,
-          backgroundColor: 'rgba(0,0,0,0.5)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          zIndex: 1000
-        }}>
-          <div className="card" style={{ width: '480px', maxWidth: '90%' }}>
+        <div className="modal-overlay">
+          <div className="card modal-card">
             <h2 className="card-title" style={{ marginBottom: '12px' }}>Manual Cash Resolution</h2>
             <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', marginBottom: '16px' }}>
               Assigning bank receipt <strong>{selectedUnmatched.reference}</strong> ({formatINR(selectedUnmatched.amount)}) from <strong>{selectedUnmatched.payer_name}</strong>.
@@ -252,7 +244,7 @@ export default function CashApplication() {
               </select>
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px' }}>
+            <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px', flexWrap: 'wrap' }}>
               <button className="btn-secondary" onClick={() => setSelectedUnmatched(null)}>Cancel</button>
               <button className="btn-primary" onClick={handleManualResolve} disabled={resolving}>
                 {resolving ? "Saving Match..." : "Confirm 100% Match"}

@@ -65,7 +65,7 @@ export default function AiCollectionAssistant({ selectedCustomerContext }) {
 
   return (
     <div>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
+      <div className="grid-2-col">
         
         {/* Left Panel: Deterministic Context Assembly */}
         <div className="card">
@@ -101,7 +101,7 @@ export default function AiCollectionAssistant({ selectedCustomerContext }) {
               />
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+            <div className="form-row-2">
               <div>
                 <label style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 600 }}>OUTSTANDING AMOUNT (₹)</label>
                 <input 

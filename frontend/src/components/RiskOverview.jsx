@@ -81,7 +81,7 @@ export default function RiskOverview({ data, loading, onSelectCustomer }) {
       </div>
 
       {/* Visualizations Grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', marginBottom: '32px' }}>
+      <div className="grid-2-col">
         {/* Risk Distribution Chart */}
         <div className="card">
           <div className="card-header">
@@ -133,7 +133,7 @@ export default function RiskOverview({ data, loading, onSelectCustomer }) {
 
       {/* Payment Predictions Table */}
       <div className="card">
-        <div className="card-header" style={{ flexWrap: 'wrap', gap: '16px' }}>
+        <div className="card-header">
           <div>
             <h2 className="card-title">Payment Risk Predictions (Open Invoices)</h2>
             <p style={{ margin: '2px 0 0 0', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
@@ -141,7 +141,7 @@ export default function RiskOverview({ data, loading, onSelectCustomer }) {
             </p>
           </div>
 
-          <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+          <div className="card-controls">
             {/* Search */}
             <div style={{ position: 'relative' }}>
               <Search size={16} style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />

@@ -39,9 +39,9 @@ export default function CollectionsPriorityQueue({ onLaunchAssistant }) {
 
   return (
     <div className="card">
-      <div className="card-header" style={{ flexWrap: 'wrap', gap: '16px' }}>
+      <div className="card-header">
         <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
             <h2 className="card-title">Collections Priority Queue</h2>
             <span className="badge badge-low" style={{ background: '#121212', color: '#FFF' }}>
               PURE FORMULA • PURE DETERMINISTIC
@@ -52,7 +52,7 @@ export default function CollectionsPriorityQueue({ onLaunchAssistant }) {
           </p>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+        <div className="card-controls">
           {/* Dispute Penalty Toggle */}
           <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontSize: '0.85rem', fontWeight: 500 }}>
             <input 
